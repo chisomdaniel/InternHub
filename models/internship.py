@@ -11,6 +11,9 @@ class Internship(BaseModel, Base):
 
     title = Column(String(128), nullable=False)
     company = ""
+    company_website = ""
+    email = ""
+    phone_number = ""
     city = ""
     state = ""
     position_type = ""
