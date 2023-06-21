@@ -26,4 +26,7 @@ class Internship(BaseModel, Base):
     expire = ""
     note = ""  # include any additional note
     closing = ""   # add an optional closing statement
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
     
