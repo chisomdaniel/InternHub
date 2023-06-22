@@ -28,5 +28,21 @@ class Internship(BaseModel, Base):
     closing = ""   # add an optional closing statement
 
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+        ''' Instantiate our Internship class,
+
+        First create the the default attribute from the `BaseModel class`,
+        then set the object attribute from the kwards argument passed.
+
+        `**kwarg` must be passed to the class when creating it
+        '''
+        super().__init__()
+
+        if **kwargs:
+            for key, value in kwargs.items():
+                if key == '__class__':
+                    continue
+                setattr(self, key, value)
+            self.save()
+        else:
+            print("[Error] Incomplete parameters to create model.")
     
