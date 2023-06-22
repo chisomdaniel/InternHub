@@ -9,25 +9,25 @@ class Internship(BaseModel, Base):
     ''' Internship database model '''
     __tablename__ = "internships"
 
-    title = Column(String(128), nullable=False)
-    company = Column(String(128), nullable=False)
-    company_website = Column(String(128), nullable=False)
-    email = Column(String(128), nullable=False)   # company email
-    phone_number = Column(Integer(20), nullable=True)
-    city = Column(String(128), nullable=False)
-    state = Column(String(128), nullable=False)
-    position_type = Column(String(128), nullable=False, default="Internship")
-    description = Column(String(2000), nullable=False)
-    responsibility = Column(String(2000), nullable=False)
-    requirement = Column(String(2000), nullable=False)
-    skill = Column(String(2000), nullable=False)
-    benefit = Column(String(2000), nullable=True)
-    apply = Column(String(2000), nullable=False)  # How to apply
-    expire = Column(String(128), nullable=False)  # when does application close "in string format"
-    note = Column(String(2000), nullable=False)  # include any additional note
-    closing = Column(String(2000), nullable=False)   # add an optional closing statement
+    title = Column(String(50), nullable=False)
+    company = Column(String(50), nullable=False)
+    company_website = Column(String(50), nullable=False)
+    email = Column(String(50), nullable=False)   # company email
+    phone_number = Column(Integer, nullable=True)
+    city = Column(String(50), nullable=False)
+    state = Column(String(50), nullable=False)
+    position_type = Column(String(50), nullable=False, default="Internship")
+    description = Column(String(1000), nullable=False)
+    responsibility = Column(String(1000), nullable=False)
+    requirement = Column(String(1000), nullable=False)
+    skill = Column(String(1000), nullable=False)
+    benefit = Column(String(1000), nullable=True)
+    apply = Column(String(1000), nullable=False)  # How to apply
+    expire = Column(String(50), nullable=True)  # when does application close "in string format"
+    note = Column(String(1000), nullable=True)  # include any additional note
+    closing = Column(String(1000), nullable=True)   # add an optional closing statement
 
-    def __init__(self, **kwargs):
+    def __init__(self, *arg, **kwargs):
         ''' Instantiate our Internship class,
 
         First create the the default attribute from the `BaseModel class`,
@@ -37,7 +37,7 @@ class Internship(BaseModel, Base):
         '''
         super().__init__()
 
-        if **kwargs:
+        if kwargs:
             for key, value in kwargs.items():
                 if key == '__class__':
                     continue

@@ -5,7 +5,6 @@ import uuid
 import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, DateTime
-from models import storage
 
 
 Base = declarative_base()
@@ -26,12 +25,14 @@ class BaseModel:
     
     def save(self):
         ''' Save new model instance to database '''
+        from models import storage
         self.updated_at = datetime.now()
         storage.new(self)
         storage.save()
     
     def delete(self):
         ''' Delete the current class instance '''
+        from models import storage
         storage.delete(self)
     
     def to_dict(self):
