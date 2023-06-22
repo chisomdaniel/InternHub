@@ -7,10 +7,11 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import scoped_session
+from os import getenv
 
 
 user = "internhub"
-password = ""
+password = getenv('DB_PASS')  # get from evironment variable
 host = "localhost"
 database = "internhub_db"
 
