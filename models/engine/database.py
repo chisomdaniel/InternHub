@@ -9,10 +9,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import scoped_session
 
 
-user = ""
+user = "internhub"
 password = ""
-host = ""
-database = ""
+host = "localhost"
+database = "internhub_db"
 
 
 class DB_engine:
