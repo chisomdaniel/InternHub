@@ -1,0 +1,78 @@
+footer {
+    bottom: 0;
+    position: absolute;
+    background-color: #fff;
+    height: 100px;
+    width: 100%;
+    color: #000000; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-top: 1px solid #f1f1f1;
+}
+a.site-name {
+    text-decoration: none;
+    color: #0000ff;
+}
+.container {
+    width: 150px;
+    background-color: #f1f1f1;
+    padding: 20px;
+
+}
+.container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.container li {
+    margin-bottom: 60px;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+    line-height: 24px;
+}
+
+.home-icon {
+    background-image: url('../images/icons8-home-30.png');
+}
+.company-icon {
+    background-image: url('../images/icons8-group-of-companies-50.png');
+}
+.salary-icon {
+    background-image: url('../images/icons8-salary-50.png');
+}
+.About-icon {
+    background-image: url('../images/icons8-about-50.png');
+}
+.Help-icon {
+    background-image: url('../images/icons8-help-50.png');
+}
+.Logout-icon {
+    background-image: url('../images/icons8-log-out-30.png');
+}
+
+header {
+    height: 35px;
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+    background-repeat: no-repeat;
+    
+}
+header .search-box { 
+    display: flex;
+    align-items: center; 
+}
+header .search-box input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border-radius: 3px;
+}
+ header h1 {
+    
+    font-size: 25px;
+    font-family: 'Mochiy Pop P One';
+    
+}
