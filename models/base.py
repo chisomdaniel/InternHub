@@ -16,22 +16,11 @@ class BaseModel:
     created_at = Column(DateTime, nullable=False, default=datetime.utcnow())
     updated_at = Column(DateTime, nullable=False, default=datetime.utcnow(), onupdate=datetime.utcnow())
 
-    def __init__(self, **kwargs):
-        if len(kwargs) > 3:
-            self.id = kwargs.get('id')
-            self.created_at = datetime.fromisoformat(kwargs['created_at'])
-            self.updated_at = datetime.fromisoformat(kwargs['updated_at'])
+    def __init__(self):
+        self.id = str(uuid.uuid4())
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
 
-            for key, value in kwargs.items():
-                if key == '__class__':
-                    continue
-                setattr(self, key, value)
-
-        else:
-            self.id = str(uuid.uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
-    
     def update(self):
         ''' Update our Model with new/updated info '''
     
