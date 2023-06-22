@@ -10,22 +10,22 @@ class Internship(BaseModel, Base):
     __tablename__ = "internships"
 
     title = Column(String(128), nullable=False)
-    company = ""
-    company_website = ""
-    email = ""
-    phone_number = ""
-    city = ""
-    state = ""
-    position_type = ""
-    description = ""
-    responsibility = ""
-    requirement = ""
-    skill = ""
-    benefit = ""
-    apply = ""
-    expire = ""
-    note = ""  # include any additional note
-    closing = ""   # add an optional closing statement
+    company = Column(String(128), nullable=False)
+    company_website = Column(String(128), nullable=False)
+    email = Column(String(128), nullable=False)   # company email
+    phone_number = Column(Integer(20), nullable=True)
+    city = Column(String(128), nullable=False)
+    state = Column(String(128), nullable=False)
+    position_type = Column(String(128), nullable=False, default="Internship")
+    description = Column(String(2000), nullable=False)
+    responsibility = Column(String(2000), nullable=False)
+    requirement = Column(String(2000), nullable=False)
+    skill = Column(String(2000), nullable=False)
+    benefit = Column(String(2000), nullable=True)
+    apply = Column(String(2000), nullable=False)  # How to apply
+    expire = Column(String(128), nullable=False)  # when does application close "in string format"
+    note = Column(String(2000), nullable=False)  # include any additional note
+    closing = Column(String(2000), nullable=False)   # add an optional closing statement
 
     def __init__(self, **kwargs):
         ''' Instantiate our Internship class,
