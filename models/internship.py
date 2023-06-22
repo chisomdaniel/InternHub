@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 ''' Model for our internships posting info '''
-from models import Base, BaseModel
+from models.base import Base, BaseModel
 import sqlalchemy
 from sqlalchemy import Column, Integer, String, DateTime
 

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 ''' Main database engine for our data'''
 import os
-from models.Base import BaseModel
+from models.base import BaseModel
 from models.internship import Internship
 import sqlalchemy
 from sqlalchemy import create_engine
