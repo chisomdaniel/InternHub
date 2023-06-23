@@ -50,6 +50,8 @@ class DB_engine:
         new_dict = {}
         for obj in objs:
             new_dict[f"{obj.__class__.__name__}.{obj.id}"] = obj
+        
+        return new_dict
     
     def save(self):
         ''' Save data to our relational db (mysql)'''
@@ -62,6 +64,7 @@ class DB_engine:
         ''' Delete a data from the database '''
         if obj is not None:
             self.__session.delete(obj)
+            self.__session.commit()
     
     def reload(self):
         ''' Reload our data instance from our database to python '''

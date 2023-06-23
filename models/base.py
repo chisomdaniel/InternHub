@@ -43,9 +43,11 @@ class BaseModel:
         new_dict['updated_at'] = self.updated_at.isoformat()
 
         return new_dict
-    
+
     def __str__(self):
         ''' A custom string for when our model is printed '''
         string = "{}:\n[{}]\n{}".format(self.__class__.__name__,
                                         self.id,
-                                        self.to_dict)
+                                        self.to_dict())
+    
+        return string
