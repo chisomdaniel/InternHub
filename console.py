@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 ''' Console application to interace directly with our database'''
+
+print("\nConsole application is not ready to be used yet\n")
+exit()
+
 import cmd
 from models.internship import Internship
 
