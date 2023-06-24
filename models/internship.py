@@ -16,6 +16,7 @@ class Internship(BaseModel, Base):
     phone_number = Column(Integer, nullable=True)
     city = Column(String(50), nullable=False)
     state = Column(String(50), nullable=False)
+    country = Column(String(50), nullable=False)
     position_type = Column(String(50), nullable=False, default="Internship")
     description = Column(String(1000), nullable=False)
     responsibility = Column(String(1000), nullable=False)
@@ -37,9 +38,10 @@ class Internship(BaseModel, Base):
         '''
         super().__init__()
 
-        if kwargs:
+        ignore = ['id', 'updated_at', 'created_at', '__class__']
+        if len(kwargs.keys()) >= 12:
             for key, value in kwargs.items():
-                if key == '__class__':
+                if key in ignore:
                     continue
                 setattr(self, key, value)
             self.save()
