@@ -134,6 +134,10 @@ header nav {
   margin-left: 20px;
 }
 
+.home-nav a:hover {
+  color: white;
+}
+
 .center {
   padding-left: 18%;
   padding-right: 30%;
@@ -159,6 +163,14 @@ small {
   padding-right: 20px;
   background-color: #663DE4;
   border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #8765eb;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .position {
