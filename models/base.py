@@ -46,7 +46,7 @@ class BaseModel:
 
     def __str__(self):
         ''' A custom string for when our model is printed '''
-        string = "{}:\n[{}]\n{}".format(self.__class__.__name__,
+        string = "{}:\n[{}]\n{}\n".format(self.__class__.__name__,
                                         self.id,
                                         self.to_dict())
     
