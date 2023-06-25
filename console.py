@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 ''' Console application to interace directly with our database'''
-
-print("\nConsole application is not Tested yet\n")
-exit()
-
 import cmd
 from models.internship import Internship
+from models import storage
 
 tables = {'Internship': Internship}
 
@@ -28,10 +25,10 @@ class Devshell(cmd.Cmd):
     def do_create(self, arg):
         ''' Create a new internship data in the DB
 
-            [Usage] update <model name> <space separated data and value pair>
+        [Usage] create <model name> <space separated data and value pair>
 
-            Ensure the value for each specified column is also specified,
-            i.e everything is separated with a space
+        Ensure the value for each specified column is also specified,
+        i.e everything is separated with a space
         '''
         args = arg.split()
 
@@ -50,10 +47,14 @@ class Devshell(cmd.Cmd):
             return False
         
         new_dict = {}
-        for i in args[1:]:
+        count = 0
+        args2 = args[1:]
+        for i in args2:
             if count % 2 == 0:
-                new_dict[args[count]] = args[count + 1]
+                new_dict[args2[count]] = args2[count + 1]
+            count += 1
         
+        print(new_dict)
         instance = tables[args[0]](**new_dict)
         print(instance.id)
     
@@ -66,7 +67,7 @@ class Devshell(cmd.Cmd):
             print("** No table specified **")
             return False
         
-        if args[0] not in tables.keys:
+        if args[0] not in tables.keys():
             print("** Invalid table name spacified **")
             print('Available tables are', tables.keys())
             return False
@@ -95,8 +96,8 @@ class Devshell(cmd.Cmd):
             print("** Invalid table name spacified **")
             print('Available tables are', tables.keys())
             return False
-        
-        for each in data_dict.values:
+
+        for each in data_dict.values():
             print(each)
     
     def do_delete(self, arg):
@@ -108,7 +109,7 @@ class Devshell(cmd.Cmd):
             print("[Usage] delete <model name> <model id>")
             return False
         
-        if args[0] not in tables.keys:
+        if args[0] not in tables.keys():
             print("** Invalid table name spacified **")
             print('Available tables are', tables.keys())
             return False
@@ -120,6 +121,13 @@ class Devshell(cmd.Cmd):
             print("** Invalid id specified/model not found **")
 
     def do_update(self, arg):
+        ''' Update the parameters of a model
+
+        [Usage] update <model name> <model id> <space separated data and value pair>
+
+        Ensure the value for each specified column is also specified,
+        i.e everything is separated with a space
+        '''
         args = arg.split()
 
         if len(args) <= 2:
@@ -127,7 +135,7 @@ class Devshell(cmd.Cmd):
             print("[Usage] update <model name> <model id> <space separated data and value pair>")
             return False
         
-        if args[0] not in tables.keys:
+        if args[0] not in tables.keys():
             print("** Invalid table name spacified **")
             print('Available tables are', tables.keys())
             return False
@@ -141,12 +149,13 @@ class Devshell(cmd.Cmd):
             instance = storage.all(args[0])[key]
         
             count = 0
-            ignore = ['id', 'updated_at', 'created_at', '__class__']
+            ignore = ['id', 'updated_at', 'created_at', '__class__', '_sa_instance_state']
+            args2 = args[2:]
             for i in args[2:]:
                 if i in ignore:
                     continue
                 if count % 2 == 0:
-                    setattr(instance, args[count], args[count + 1])
+                    setattr(instance, args2[count], args2[count + 1])
             
             instance.save()
         else:

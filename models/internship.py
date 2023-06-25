@@ -12,7 +12,7 @@ class Internship(BaseModel, Base):
     title = Column(String(50), nullable=False)
     company = Column(String(50), nullable=False)
     company_website = Column(String(50), nullable=False)
-    email = Column(String(50), nullable=False)   # company email
+    company_email = Column(String(50), nullable=False)   # company email
     phone_number = Column(Integer, nullable=True)
     city = Column(String(50), nullable=False)
     state = Column(String(50), nullable=False)
