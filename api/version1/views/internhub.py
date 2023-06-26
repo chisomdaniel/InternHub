@@ -9,10 +9,7 @@ def post_jobs():
     """ Submits an application """
     if not request.get_json():
         abort(400, description="Not a JSON")
-
-    if  'email' or 'name' not in request.get_json():
-        abort(400, description="Missing information")
-
+        
     data = request.get_json()
     insta = Internship(**data)
     insta.save()
