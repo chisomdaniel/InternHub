@@ -30,4 +30,5 @@ def update_job(update_id):
         if k not in keys_ignore:
             setattr(interns, k, v)
     storage.save()
+    return jsonify(interns.to_dict()), 201
         
