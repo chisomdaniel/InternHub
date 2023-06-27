@@ -2,6 +2,7 @@
 """Importation of flask"""
 from os import environ
 from models import storage
+from api.version1.views import app_views
 from flask import Flask, render_template, jsonify
 from flask_cors import CORS
 
