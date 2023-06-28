@@ -34,6 +34,9 @@ a.site-name {
     background-size: 24px 24px;
     line-height: 24px;
 }
+.container li button {
+    text-decoration: none;
+}
 
 .home-icon {
     background-image: url('../images/icons8-home-30.png');
@@ -61,12 +64,15 @@ header {
     background-repeat: no-repeat;
     
 }
-header .search-box { 
+  header .search-box { 
     display: flex;
-    align-items: center; 
+    align-items: center;
+    margin-left: 40%;
+
 }
-header .search-box input[type="text"] {
-    width: 200px;
+ .search-box input[type="text"] {
+    width: 300px;
+    height: 25px;
     padding: 5px;
     border-radius: 3px;
 }
