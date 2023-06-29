@@ -34,7 +34,11 @@ a.site-name {
     background-size: 24px 24px;
     line-height: 24px;
 }
-.container li button {
+.container .button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4287f5; /* Adjust the background color as needed */
+    color: #fff;
     text-decoration: none;
 }
 
