@@ -68,6 +68,7 @@ header {
     display: flex;
     align-items: center;
     margin-left: 40%;
+    
 
 }
  .search-box input[type="text"] {
@@ -82,3 +83,64 @@ header {
     font-family: 'Mochiy Pop P One';
     
 }
+.job_display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50%;
+    margin-bottom: 10%;
+    border: #000000;
+  }
+
+  .contents {
+    text-align: center;
+  }
+  
+  .job_display1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50%;
+    margin-bottom: 10%;
+    border: #000000;
+  }
+
+  .contents1 {
+    text-align: center;
+  }
+  .job_display2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50%;
+    margin-bottom: 10%;
+    border: #000000;
+  }
+
+  .contents2 {
+    text-align: center;
+  }
+  .job_display3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50%;
+    margin-bottom: 10%;
+    border: #000000;
+  }
+
+  .contents3 {
+    text-align: center;
+  }
+  .job_display4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100%;
+    margin-top: 10px;
+    border: #000000;
+  }
+
+  .contents4 {
+    text-align: center;
+  }
