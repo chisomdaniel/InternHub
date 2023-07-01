@@ -42,6 +42,9 @@ class BaseModel:
         new_dict['created_at'] = self.created_at.isoformat()
         new_dict['updated_at'] = self.updated_at.isoformat()
 
+        if new_dict.get('_sa_instance_state', None):
+            del new_dict['_sa_instance_state']
+
         return new_dict
 
     def __str__(self):
