@@ -11,6 +11,7 @@ footer {
     display: flex;
     border-top: 1px solid #f1f1f1;
 }
+
 a.site-name {
     text-decoration: none;
     color: #0000ff;
@@ -19,8 +20,8 @@ a.site-name {
     width: 150px;
     background-color: #f1f1f1;
     padding: 20px;
-
 }
+
 .container ul {
     list-style-type: none;
     padding: 0;
@@ -66,8 +67,8 @@ header {
     width: 100%;
     border-bottom: 1px solid #f1f1f1;
     background-repeat: no-repeat;
-    
 }
+
 
 header .search-box { 
     display: flex;
