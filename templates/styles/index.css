@@ -5,28 +5,17 @@ aside {
     
 }
 
-<<<<<<< HEAD
 section {
     float: right;
     display: inline-block;
     width: 30%;
-=======
-a.site-name {
-    text-decoration: none;
-    color: #0000ff;
->>>>>>> refs/remotes/origin/main
 }
 .container1  {
     width: 150px;
     background-color: #f1f1f1;
     padding: 20px;
 }
-<<<<<<< HEAD
 .container1 ul {
-=======
-
-.container ul {
->>>>>>> refs/remotes/origin/main
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -78,7 +67,6 @@ a.site-name {
 .site-title {
     color: #0000ff;
 }
-<<<<<<< HEAD
   .search-bar {
     width: 200px;
     padding: 5px;
@@ -88,24 +76,6 @@ a.site-name {
     font-size: 14px;
   }
   .search-contain input[type="text"] {
-=======
-
-header {
-    height: 35px;
-    width: 100%;
-    border-bottom: 1px solid #f1f1f1;
-    background-repeat: no-repeat;
-}
-
-
-header .search-box { 
-    display: flex;
-    align-items: center;
-    margin-left: 40%;
-}
-
-.search-box input[type="text"] {
->>>>>>> refs/remotes/origin/main
     width: 300px;
     height: 25px;
     padding: 5px;
@@ -121,5 +91,3 @@ header .search-box {
     padding-left: 20px;
     padding-right: 20px;
 }
- 
-  
