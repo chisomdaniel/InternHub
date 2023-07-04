@@ -1,3 +1,5 @@
+/* After several design iteration, this file was no longer used but can still be viewed */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
 */
@@ -111,7 +113,7 @@ footer {
 
 header .logo {
   float: left;
-  margin-left: 30px;
+  margin-left: 70px;
   margin-top: 20px;
 }
 
@@ -174,5 +176,5 @@ small {
 }
 
 .position {
-  margin-top: 30px;  /* the position details keep entering th e button element without this line */
+  margin-top: 30px;  /* the position details keep entering the button element without this line */
 }
