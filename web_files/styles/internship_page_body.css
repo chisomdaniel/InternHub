@@ -66,5 +66,9 @@ section.center {
 .center a {
     text-decoration-line: none;
     color: black;
-  }
-  
+}
+
+.required:before {
+    content: " *";
+    color: red;
+}

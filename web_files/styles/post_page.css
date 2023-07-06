@@ -52,3 +52,17 @@ label {
 #submit-button:hover {
     background-color: #7653e0;
 }
+
+.post-info {
+    color: red;
+}
+
+aside {
+    margin-right: 0;
+}
+
+.center {
+    padding-left: 6%;
+    padding-right: 10%;
+    width: 80%;
+}
