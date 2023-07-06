@@ -36,11 +36,12 @@ html, body {
 }
 
 .hero h1 {
-    tex
+    font-size: 70px;
+    margin-bottom: 0;
 }
 
 .hero p {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 header {
