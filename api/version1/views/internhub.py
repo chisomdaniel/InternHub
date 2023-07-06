@@ -74,4 +74,3 @@ def update_job(job_id):
 
     position.save()
     return jsonify(position.to_dict()), 201
-        
