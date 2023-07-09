@@ -52,7 +52,7 @@ class DB_engine:
             new_dict[f"{obj.__class__.__name__}.{obj.id}"] = obj
         
         return new_dict
-    
+
     def save(self):
         ''' Save data to our relational db (mysql)'''
         self.__session.commit()

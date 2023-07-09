@@ -1,0 +1,74 @@
+.center {
+    float: left;
+    width: 70%;
+    height: 600px;
+    overflow-y: scroll;
+    padding-bottom: 40px;
+}
+
+/* disable scrollbar in chrome, safari, opera, etc */
+section.center::-webkit-scrollbar {
+    display: none;
+}
+
+.center {
+    padding-left: 3%;
+    padding-right: 10%;
+}
+
+section.center {
+    padding-top: 30px;
+}
+
+.center .button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #663DE4;
+    border-radius: 5px;
+}
+  
+.center .button:hover {
+    background-color: #8765eb;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+  
+.center .position {
+    margin-top: 30px;  /* the position details keep entering the button element without this line */
+}
+
+.center h1, .center h2, .center h3, .center h4, .center h5 {
+    margin-bottom: 22px;
+    font-weight: bold;
+}
+  
+.center p {
+    margin-bottom: 22px;
+    font-weight: 16px;
+}
+  
+.center h1 {
+    font-size: 33px;
+  }
+  
+.center h3{
+    font-size: 21px;
+  }
+  
+.center h4 {
+    font-size: 18px;
+  }
+  
+.center a {
+    text-decoration-line: none;
+    color: black;
+}
+
+.required:before {
+    content: " *";
+    color: red;
+}

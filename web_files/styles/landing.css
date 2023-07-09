@@ -15,7 +15,7 @@ html, body {
     width: 100%;
     height: 450px;
     background-color: #663DE4;
-    background-image: url('image/web_hero.png');
+    background-image: url('../images/web_hero.png');
     position: relative;
     background-repeat: no-repeat;
     overflow: hidden;

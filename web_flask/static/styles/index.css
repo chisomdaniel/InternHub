@@ -38,7 +38,7 @@ section.alljob {
     width: 70%;
     height: 600px;
     overflow-y: scroll;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
 }
 
 /* disable scrollbar in chrome, safari, opera, etc */

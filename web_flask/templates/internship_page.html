@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>InternHub</title>
+        <link rel="stylesheet" href="styles/index.css"/>
+        <link rel="stylesheet" href="styles/internship_page_body.css"/>
+        <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    </head>
+    <body>
+        <header>
+            <div class="header-contain logo">
+                <h1 class="site-title">InternHub</h1>
+                <p class="tagline">Creating a better world</p>
+            </div>
+            <div class="search-contain">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button>Search</button>
+            </div>
+        </header>
+    
+        <section class="main">
+            <aside class="container1">
+                <ul>
+                    <a href="#"><li class="home-icon">Home</li></a>
+                    <a href="#"><li class="company-icon">Companies</li></a>
+                    <a href="#"><li class="salary-icon">Salaries</li></a>
+                    <a href="#"><li class="About-icon">About</li></a>
+                    <a href="#"><li class="Help-icon">Help</li></a>
+                    <a class="btn btn-alt" id="post" href="post.html">POST</a>
+                </ul>
+            </aside>
+
+            <section class="center">
+                <h1>{{ info.title }}</h1>
+                <a href="{{ info.company_website }}">{{ info.company }}</a>
+                <p>{{ info.state }}, {{ info.country }}</p>
+                <p>Job Type: Internship</p>
+                <a class="button" href="#">Apply Now</a>
+                <h3 class="position">Position details</h3>
+                {% if info.description %}
+                <p>{{ info.description }}</p>
+                {% endif %}
+                {% if info.responsibility %}
+                <h4>Responsibilities</h4>
+                <ul>
+                    <li>{{ info.responsibility }}</li>
+                
+                </ul>
+                {% endif %}
+                {% if info.requirement %}
+                <h4>Requirements</h4>
+                <ul>
+                    <li>{{ info.requirement }}</li>
+                </ul>
+                {% endif %}
+                {% if info.skill %}
+                <h4>Skills and Qualifications</h4>
+                <ul>
+                    <li>{{ info.skill }}</li>
+                </ul>
+                {% endif %}
+                {% if info.benefit %}
+                <h4>Benefits and Perks:</h4>
+                <ul>
+                    <li>{{ info.benefit }}</li>
+                </ul>
+                {% endif %}
+                {% if info.apply %}
+                <h4>How to Apply:</h4>
+                <p>{{ info.apply }}<br></p>
+                {% endif %}
+
+                {% if info.note %}
+                <p><br><br><strong>Note:</strong> {{ info.note }}</p>
+                {% endif %}
+
+                {% if info.closing %}
+                <p><br>Closing: {{ info.closing }}</p>
+                {% endif %}
+
+                <a class="button" href="#">Apply Now</a>
+            </section>
+        </section>
+
+        <footer>
+            <small>&copy;2023 - Daniel and Dinobi</small>
+        </footer>
+    </body>
+</html>
