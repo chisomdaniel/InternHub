@@ -21,6 +21,7 @@ $(function() {
                 $.each(data, function(index, value) {
                     $(".post-info").append("<em>Posted Successfully</em>")
                     console.log("Done")
+                    alert("Posted successfully")
                 });
             }
         });

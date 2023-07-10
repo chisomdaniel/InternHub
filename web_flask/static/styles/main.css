@@ -1,0 +1,180 @@
+/* After several design iteration, this file was no longer used but can still be viewed */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of CSS reset */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: 22px;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 22px;
+  font-weight: 16px;
+}
+
+h1 {
+  font-size: 33px;
+}
+
+h3{
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+a {
+  text-decoration-line: none;
+  color: black;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #663DE4;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: #663DE4;
+  margin-top: 40px;
+}
+
+/* clearfix */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  zoom: 1;
+}
+/* end clearfix */
+
+header .logo {
+  float: left;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.logo h1,
+.logo .tagline {
+  margin-bottom: 0px;
+}
+
+header nav {
+  float: right;
+}
+
+.home-nav {
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.home-nav a {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.home-nav a:hover {
+  color: white;
+}
+
+.center {
+  padding-left: 18%;
+  padding-right: 30%;
+}
+
+section.main {
+  padding-top: 100px;
+}
+
+footer {
+  padding-top: 50px;
+}
+
+small {
+  margin-left: 45%;
+}
+
+.button {
+  border-style: solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #663DE4;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #8765eb;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.position {
+  margin-top: 30px;  /* the position details keep entering the button element without this line */
+}

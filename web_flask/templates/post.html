@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>InternHub</title>
+        <link rel="stylesheet" type="text/css" href="../static/styles/index.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/styles/internship_page_body.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/styles/post_page.css"/>
+        <!-- <link rel="stylesheet" href="styles/main.css"> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../static/scripts/post_page.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/"><div class="header-contain logo">
+                <h1 class="site-title">InternHub</h1>
+                <p class="tagline">Creating a better world</p>
+            </div></a>
+            <div class="search-contain">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button>Search</button>
+            </div>
+        </header>
+    
+        <section class="main">
+            <aside class="container1">
+                <ul>
+                    <a href="/"><li class="home-icon">Home</li></a>
+                    <a href="#"><li class="company-icon">Companies</li></a>
+                    <a href="#"><li class="salary-icon">Salaries</li></a>
+                    <a href="#"><li class="About-icon">About</li></a>
+                    <a href="#"><li class="Help-icon">Help</li></a>
+                    <a class="btn btn-alt" id="post" href="post.html">POST</a>
+                </ul>
+            </aside>
+
+            <section class="center form">
+                <h1>Post Internship</h1>
+                <form action="http://127.0.0.1:5000/api/version1/jobs" id="post-form">
+                    <label class="required">Position Title<input type="text" name="title" id="title" placeholder="Position Title" required></label>
+                    <label class="required">Company Name<input type="text" name="company" id="company" placeholder="Company Name" required></label>
+                    <label>Company Website<input type="text" name="company_website" id="company_website" placeholder="Company Website"></label>
+                    <label class="required">Company Email<input type="email" name="company_email" id="company_email" placeholder="Company Email" required></label>
+                    <label>Phone Number<input type="number" name="phone_number" id="phone_number" placeholder="Phone Number"></label>
+                    <label class="required">City<input type="text" name="city" id="city" placeholder="City" required></label>
+                    <label class="required">State<input type="text" name="state" id="state" placeholder="State" required></label>
+                    <label class="required">Country<input type="text" name="country" id="country" placeholder="Country" required></label>
+                    <label>Position Type<input type="text" name="position_type" id="position_type" value="Internship" disabled></label>
+                    <label class="required">Job Description<textarea name="description" id="description" placeholder="Write Position Description Here" required></textarea></label>
+                    <label class="required">Responsibility<textarea name="responsibility" id="responsibility" placeholder="Write Position Responsibilities Here" required></textarea></label>
+                    <label class="required">Requirements<textarea name="requirement" id="requirement" placeholder="Write Position Requirements here" required></textarea></label>
+                    <label class="required">Skill<textarea name="skill" id="skill" placeholder="Required skills" required></textarea></label>
+                    <label>Benefits<textarea name="benefit" id="benefit" placeholder="Benefit"></textarea></label>
+                    <label class="required">Application Guide<textarea name="apply" id="apply" placeholder="How To Apply" required></textarea></label>
+                    <label class="required">Application Close Date<input type="text" name="expire" id="expire" placeholder="Application Closing" required></label>
+                    <label>Additional note<textarea name="note" id="note" placeholder="Additional note"></textarea></label>
+                    <label>Closing<textarea name="closing" id="closing" placeholder="Closing statement"></textarea></label>
+                    <input type="submit" value="Post Job" id="submit-button"></input>
+                </form>
+                <h4 class="post-info"></h4>
+            </section>
+        </section>
+
+        <footer>
+            <small>&copy;2023 - Daniel and Dinobi</small>
+        </footer>
+    </body>
+</html>
