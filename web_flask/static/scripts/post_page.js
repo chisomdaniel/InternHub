@@ -33,7 +33,7 @@ $(function() {
         */
 
         console.log(myData)
-        url1 = 'http://localhost:5000/api/version1/jobs';
+        url1 = 'http://127.0.0.1:5000/api/version1/jobs';
         console.log("Started posting")
         $.ajax({
             url: url1,
