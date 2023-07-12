@@ -36,7 +36,7 @@
                 <a href="{{ info.company_website }}">{{ info.company }}</a>
                 <p>{{ info.state }}, {{ info.country }}</p>
                 <p>Job Type: Internship</p>
-                <a class="button" href="#">Apply Now</a>
+                <a class="button" href="mailto:{{ info.company_email }}">Apply Now</a>
                 <h3 class="position">Position details</h3>
                 {% if info.description %}
                 <p>{{ info.description }}</p>
@@ -79,7 +79,7 @@
                 <p><br>Closing: {{ info.closing }}</p>
                 {% endif %}
 
-                <a class="button" href="#">Apply Now</a>
+                <a class="button" href="mailto:{{ info.company_email }}">Apply Now</a>
             </section>
         </section>
 
