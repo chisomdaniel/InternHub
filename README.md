@@ -6,9 +6,9 @@ InternHub is a full-stack web application that connects companies with potential
 
 ## ✨ Features
 
-- **Internship Management**: Post, edit, delete, and search internship opportunities
+- **Internship Management**: Post, edit, and delete internship opportunities
 - **RESTful API**: Complete CRUD operations for internship data
-- **Responsive Web Interface**: Modern, user-friendly design with search functionality
+- **Responsive Web Interface**: Modern, user-friendly design
 - **Database Integration**: MySQL database with SQLAlchemy ORM
 - **Multi-Application Architecture**: Separate API and web applications
 - **CORS Support**: Cross-origin resource sharing for API access
